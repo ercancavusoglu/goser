@@ -1,4 +1,4 @@
-module fiber
+module github.com/ercancavusoglu/goser
 
 go 1.16
 
