@@ -1,8 +1,8 @@
 package main
 
 import (
-	"./database"
 	"fmt"
+	"github.com/ercancavusoglu/goser/database"
 	"github.com/gofiber/fiber/v2"
 	"log"
 )

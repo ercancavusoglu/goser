@@ -1,10 +1,11 @@
 package database
 
 import (
-	"../models"
+	"github.com/ercancavusoglu/goser/models"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
+
 	"log"
 	"os"
 )
@@ -13,7 +14,7 @@ type DbInstance struct {
 	Db *gorm.DB
 }
 
-var _ DbInstance
+var Database DbInstance
 
 func ConnectDb() {
 	db, err := gorm.Open(sqlite.Open("api.db"), &gorm.Config{})
@@ -30,6 +31,7 @@ func ConnectDb() {
 	// Add migrations
 	db.AutoMigrate(&models.User{}, &models.Product{}, &models.Order{})
 
-	_ = DbInstance{Db: db}
-
+	Database = DbInstance{
+		Db: db,
+	}
 }
