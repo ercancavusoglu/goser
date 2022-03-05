@@ -14,6 +14,6 @@ require (
 	gopkg.in/jcmturner/gokrb5.v7 v7.5.0 // indirect
 	gopkg.in/jcmturner/rpc.v1 v1.1.0 // indirect
 	gorm.io/driver/postgres v1.3.1 // indirect
-	gorm.io/driver/sqlite v1.3.1 // indirect
-	gorm.io/gorm v1.23.2 // indirect
+	gorm.io/driver/sqlite v1.3.1
+	gorm.io/gorm v1.23.2
 )
